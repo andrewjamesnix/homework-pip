@@ -1,9 +1,8 @@
 describe('Accordian', () => {
     const component = new AccordianComponent();
-    let body, headingDiv, contentDiv, listArray, buttonClickSuccessSpy;
-
+    component.init();
     beforeEach(() => {
-        component.createDom();
+        component.init();
 
 
     });
