@@ -1,90 +1,97 @@
-let boxgame = {};
-const score = document.querySelector(".score");
-const gameAreaEl = document.querySelector(".gameArea");
-const gameArea = gameAreaEl.getBoundingClientRect();
-let squares = [];
-let gamebox = {
-    x: Math.floor(gameArea.width/100),
-    y: Math.floor(gameArea.height/100)
+class ChaserGameComponent {
+
+box = {};
+score = document.querySelector(".score");
+gameAreaEl = document.querySelector(".gameArea");
+gameArea = this.gameAreaEl.getBoundingClientRect();
+squares = [];
+gamebox = {
+    x: Math.floor(this.gameArea.width/100),
+    y: Math.floor(this.gameArea.height/100)
 };
 
-let player = {
+player = {
     speed: 100,
     square: 1,
     score: 0
 };
+init = () => {
+  document.addEventListener('DOMContentLoaded', this.build);
+  document.addEventListener('keyup', function (e) {
+      const allowKey = {
+          37:'left',
+          38: 'up',
+          39: 'right',
+          40: 'down'
+      };
+      if(allowKey[e.keyCode])
+      {game.handleKey(allowKey[e.keyCode])}
+  });
+};
 
-document.addEventListener('DOMContentLoaded', build);
-document.addEventListener('keyup', function (e) {
-    const allowKey = {
-        37:'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
-    };
-    if(allowKey[e.keyCode])
-    {handleKey(allowKey[e.keyCode])}
-});
+makeActive = () => {
+    let randomIndex = Math.floor(Math.random() * this.squares.length);
 
-function makeActive() {
-    let randomIndex = Math.floor(Math.random() * squares.length);
-
-    if (randomIndex != 0 && player.square != randomIndex){
-        squares[randomIndex].classList.add('active');
+    if (randomIndex != 0 && this.player.square != randomIndex){
+        this.squares[randomIndex].classList.add('active');
     } else {
-        makeActive();
+        this.makeActive();
     }
 
-}
+};
 
-function handleKey(key){
-    if (key === 'left' && boxgame.x > gameArea.left) {
-        boxgame.x -= player.speed;
-        player.square--;
+handleKey = (key) => {
+    if (key === 'left' && this.box.x > this.gameArea.left) {
+        this.box.x -= this.player.speed;
+        this.player.square--;
     }
-    if (key === 'right' && boxgame.x < gameArea.right - boxgame.offsetWidth) {
-        boxgame.x += player.speed;
-        player.square++;
+    if (key === 'right' && this.box.x < this.gameArea.right - this.box.offsetWidth) {
+        this.box.x += this.player.speed;
+        this.player.square++;
     }
-    if (key === 'up'&& boxgame.y > gameArea.top) {
-        boxgame.y -= player.speed;
-        player.square -= gamebox.y;
+    if (key === 'up'&& this.box.y > this.gameArea.top) {
+        this.box.y -= this.player.speed;
+        this.player.square -= this.gamebox.x;
     }
-    if (key === 'down' && boxgame.y < (gameArea.bottom - boxgame.offsetHeight)) {
-        boxgame.y += player.speed;
-        player.square += gamebox.y;
+    if (key === 'down' && this.box.y < (this.gameArea.bottom - this.box.offsetHeight)) {
+        this.box.y += this.player.speed;
+        this.player.square += this.gamebox.x;
     }
-    boxgame.style.left = boxgame.x + 'px';
-    boxgame.style.top = boxgame.y + 'px';
+    this.box.style.left = this.box.x + 'px';
+    this.box.style.top = this.box.y + 'px';
 
-    console.log(squares[player.square]);
-    if (!!squares[player.square].classList.contains('active')){
+    console.log(this.squares[this.player.square]);
+    if (!!this.squares[this.player.square].classList.contains('active')){
         console.log('FOUND');
-        squares[player.square].classList.remove('active')
-        makeActive();
-        player.score++;
-        score.innerHTML = player.score;
+        this.squares[this.player.square].classList.remove('active')
+        this.makeActive();
+        this.player.score++;
+        this.score.innerHTML = this.player.score;
     }
 }
 
-function build () {
-    boxgame = document.createElement("div");
-    boxgame.classList.add("boxgame");
-    boxgame.x = gameArea.top;
-    boxgame.y = gameArea.left;
-    boxgame.style.top = boxgame.y + 'px';
-    boxgame.style.left = boxgame.x + 'px';
-    gameAreaEl.appendChild(boxgame);
+build = (key) => {
+    this.box = document.createElement("div");
+    this.box.classList.add("box");
+    this.box.x = this.gameArea.top;
+    this.box.y = this.gameArea.left;
+    this.box.style.top = this.box.y + 'px';
+    this.box.style.left = this.box.x + 'px';
+    this.gameAreaEl.appendChild(this.box);
     let counter = 1;
 
-    for(let y = 0; y < gamebox.y; y++){
-        for(let x = 0; x < gamebox.x; x++){
-            squares[counter] = document.createElement("div");
-            squares[counter].innerHTML = counter;
-            squares[counter].classList.add('square');
-            gameAreaEl.appendChild(squares[counter]);
+    for(let y = 0; y < this.gamebox.y; y++){
+        for(let x = 0; x < this.gamebox.x; x++){
+            this.squares[counter] = document.createElement("div");
+            this.squares[counter].innerHTML = counter;
+            this.squares[counter].classList.add('square');
+            this.gameAreaEl.appendChild(this.squares[counter]);
             counter++;
         }
      }
-    makeActive();
+    this.makeActive();
 }
+}
+const game = new ChaserGameComponent();
+
+game.init();
