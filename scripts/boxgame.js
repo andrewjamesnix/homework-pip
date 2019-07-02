@@ -60,9 +60,7 @@ handleKey = (key) => {
     this.box.style.left = this.box.x + 'px';
     this.box.style.top = this.box.y + 'px';
 
-    console.log(this.squares[this.player.square]);
     if (!!this.squares[this.player.square].classList.contains('active')){
-        console.log('FOUND');
         this.squares[this.player.square].classList.remove('active')
         this.makeActive();
         this.player.score++;
