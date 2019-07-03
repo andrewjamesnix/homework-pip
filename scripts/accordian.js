@@ -3,27 +3,18 @@
     NUMBER_OF_ITEMS = 2;
     container = document.createElement('div');
     nodeList = [];
+    // mainEl, contentEl;
 
     init = () => {
-        // this.container = document.getElementById('container');
-
-        // if (document.getElementById('container') === null) {
-        //   container = document.createElement('div');
-        //   container.setAttribute('id', 'container');
-        // } else {
-        //   container = document.getElementById('container');
-        //   container.innerHTML = '';
-        // }
         this.container.setAttribute('id', 'container');
         document.body.appendChild(this.container);
-         // document.body.appendChild(container);
         accordian.createDom();
         accordian.addListeners();
     };
 
     createDom = () => {
         let headingDiv, contentDiv;
-
+        this.nodeList = [];
         for(let i = 0; i < this.NUMBER_OF_ITEMS; i++) {
             headingDiv = this.createElement('heading', i);
             contentDiv = this.createElement('content', i);
@@ -32,7 +23,7 @@
         }
         // container = document.createElement('div');
         // container.setAttribute('id', 'container');
-
+        this.container.innerText = '';
         for(let i = 0; i < this.nodeList.length; i++) {
             this.container.append(this.nodeList[i]);
         }
