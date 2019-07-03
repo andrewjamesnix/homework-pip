@@ -5,17 +5,7 @@
     nodeList = [];
 
     init = () => {
-        this.nodeList  = [];
-        this.container = document.getElementById('container');
-
-        if (document.getElementById('container') === null) {
-          this.container = document.createElement('div');
-          this.container.setAttribute('id', 'container');
-        } else {
-          this.container = document.getElementById('container');
-          this.container.innerHTML = '';
-        }
-
+        this.container.setAttribute('id', 'container');
         document.body.appendChild(this.container);
         accordian.createDom();
         accordian.addListeners();
@@ -23,14 +13,16 @@
 
     createDom = () => {
         let headingDiv, contentDiv;
-
+        this.nodeList = [];
         for(let i = 0; i < this.NUMBER_OF_ITEMS; i++) {
             headingDiv = this.createElement('heading', i);
             contentDiv = this.createElement('content', i);
             this.nodeList.push(headingDiv);
             this.nodeList.push(contentDiv);
         }
-
+        // container = document.createElement('div');
+        // container.setAttribute('id', 'container');
+        this.container.innerText = '';
         for(let i = 0; i < this.nodeList.length; i++) {
             this.container.append(this.nodeList[i]);
         }
