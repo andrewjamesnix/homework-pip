@@ -52,14 +52,4 @@ describe('Accordian suffix method', () => {
         });
     });
 
-  // describe(' addListeners method', () => {
-  //
-  //     it('should return a HTML Node with correct number of nodes', () => {
-  //         component.createDom();
-  //         clickRow = sinon.spy();
-  //         component.mainEl[0].clock('click')
-  //         expect(component.mainEl.length).toBe(4);
-  //         expect(component.contentEl.length).toBe(8);
-  //     });
-  // });
 });
