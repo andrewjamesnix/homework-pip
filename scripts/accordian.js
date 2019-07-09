@@ -1,6 +1,6 @@
     class AccordianComponent {
 
-    NUMBER_OF_ITEMS = 2;
+    NUMBER_OF_ITEMS = 4;
     container = document.createElement('div');
     nodeList = [];
 

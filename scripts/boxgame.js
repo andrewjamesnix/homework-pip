@@ -5,8 +5,8 @@ class ChaserGameComponent {
     container = document.createElement('div');
     gameAreaEl = document.createElement("div");
     gamebox = {
-        x: Math.floor(8),
-        y: Math.floor(2)
+        x: Math.floor(800 / 100),
+        y: Math.floor(200 / 100)
     };
     player = {
         speed: 100,
@@ -15,25 +15,15 @@ class ChaserGameComponent {
     };
 
 
-    init = () => {
+    init = (button) => {
         this.gameAreaEl.innerHTML = '';
         this.container.innerHTML = '';
         this.score.innerHTML = '';
-        this.player = {
-            speed: 100,
-            square: 1,
-            score: 0
-        };
-        let gameArea = this.setGameArea();
-        this.gamebox = {
-            x: Math.floor(gameArea.width/100),
-            y: Math.floor(gameArea.height/100)
-        };
-        this.box = {};
         document.body.appendChild(this.container);
         this.createGameAreaDom();
         this.addListeners();
         this.build();
+        button.style.display = 'none';
     };
 
     addListeners = () => {
