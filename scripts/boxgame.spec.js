@@ -1,12 +1,8 @@
-describe('ChaserGameComponent', () => {
-    const component = new ChaserGameComponent();
+describe('BoxGameComponent', () => {
+    const component = new BoxGameComponent();
     let containerStub, gameAreaStub, scoreStub, parent;
     describe('createGameAreaDom method', () => {
         beforeEach(() => {
-            parent = {
-                querySelectorAll: sinon.stub(),
-                appendChild: sinon.stub()
-            };
             containerStub = {
                 id: 'container',
                 children: [],
@@ -22,22 +18,41 @@ describe('ChaserGameComponent', () => {
                 class: 'score',
                 setAttribute: sinon.stub()
             };
+            component.createGameAreaDom();
         });
-        it('adds correct class', () => {
+        it('adds correct class to the gameArea element', () => {
             containerStub.querySelectorAll.returns([gameAreaStub]);
             var expectedClass = 'gameArea';
 
-            component.createGameAreaDom();
-            expect(gameAreaStub.class).toBe(expectedClass);
+
+            expect(component.gameAreaEl.className).toBe(expectedClass);
+        });
+        it('adds correct class to the score element', () => {
+            containerStub.querySelectorAll.returns([gameAreaStub]);
+            var expectedClass = 'score';
+
+
+            expect(component.score.className).toBe(expectedClass);
         });
     });
-    // describe('build method', () => {
-    //     it('should create the DOM', () => {
-    //
-    //         expect(document.querySelectorAll('.box').length).toBe(1);
-    //         expect(document.querySelectorAll('.square').length).toBe(16);
-    //         expect(document.querySelectorAll('.active').length).toBe(1);
-    //
-    //     });
-    // });
+    describe('build method', () => {
+        beforeEach(() => {
+            component.build();
+        });
+
+        it('should create the Player box and grid boxes and one to be active', () => {
+            expect(component.box).toBeTruthy();
+            expect(component.squares.length).toBe(17);
+
+            let active = component.squares.find((element) => {
+                if (element) {
+                    return element.classList.contains('active')
+                }
+            });
+
+            expect(active).toBeTruthy();
+        });
+
+
+    });
 });

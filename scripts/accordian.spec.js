@@ -1,4 +1,4 @@
-describe('Accordian suffix method', () => {
+describe('AccordianComponent', () => {
     const component = new AccordianComponent();
     describe('suffix method', () => {
         it('should return correct number suffix for 1', () => {

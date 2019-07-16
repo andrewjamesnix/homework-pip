@@ -1,4 +1,4 @@
-class ChaserGameComponent {
+class BoxGameComponent {
     box = {};
     score = document.createElement("div");
     squares = [];
@@ -116,5 +116,5 @@ class ChaserGameComponent {
         this.makeActive();
     };
 }
-const game = new ChaserGameComponent();
+const game = new BoxGameComponent();
 //game.init();
