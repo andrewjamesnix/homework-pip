@@ -30,7 +30,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/accordian.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-52">
+                <state relative-caret-position="-36">
                   <caret line="36" selection-start-line="36" selection-end-line="36" />
                 </state>
               </provider>
@@ -49,16 +49,16 @@
             <entry file="file://$PROJECT_DIR$/specrunner.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="96">
-                  <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="9" selection-end-column="48" />
+                  <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/scripts/tooltip.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
+                <state relative-caret-position="416">
+                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
                 </state>
               </provider>
             </entry>
@@ -66,13 +66,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="358">
+                <state relative-caret-position="374">
                   <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/accordian.spec.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="32">
@@ -85,10 +85,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tooltip.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
+                <state relative-caret-position="111">
                   <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
                 </state>
               </provider>
@@ -106,13 +106,13 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/boxgame.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="602">
+                <state relative-caret-position="618">
                   <caret line="118" selection-start-line="118" selection-end-line="118" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/scripts/boxgame.spec.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="400">
@@ -171,17 +171,17 @@
         <option value="$PROJECT_DIR$/accordian.js" />
         <option value="$PROJECT_DIR$/accordian.spec.js" />
         <option value="$PROJECT_DIR$/scripts/require.js" />
-        <option value="$PROJECT_DIR$/scripts/tooltip.js" />
         <option value="$PROJECT_DIR$/scripts/tooltip.spec.js" />
-        <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/accordian.html" />
         <option value="$PROJECT_DIR$/boxgame.html" />
         <option value="$PROJECT_DIR$/specrunner.html" />
-        <option value="$PROJECT_DIR$/tooltip.html" />
         <option value="$PROJECT_DIR$/scripts/accordian.js" />
         <option value="$PROJECT_DIR$/scripts/accordian.spec.js" />
         <option value="$PROJECT_DIR$/scripts/boxgame.js" />
         <option value="$PROJECT_DIR$/scripts/boxgame.spec.js" />
+        <option value="$PROJECT_DIR$/scripts/tooltip.js" />
+        <option value="$PROJECT_DIR$/tooltip.html" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -279,7 +279,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108212000" />
+    <option name="totallyTimeSpent" value="108714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="78" width="1881" height="1057" extended-state="0" />
@@ -340,21 +340,14 @@
     <entry file="file://$PROJECT_DIR$/scripts/tooltips.js" />
     <entry file="file://$PROJECT_DIR$/scripts/tooltip.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="52" selection-end-line="17" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/tooltip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="416">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
+        <state relative-caret-position="374">
           <caret line="40" column="6" lean-forward="true" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
         </state>
       </provider>
@@ -376,13 +369,13 @@
     <entry file="file://$PROJECT_DIR$/specrunner.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
-          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="9" selection-end-column="48" />
+          <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/accordian.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
+        <state relative-caret-position="-36">
           <caret line="36" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
@@ -394,16 +387,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tooltip.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/boxgame.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
+        <state relative-caret-position="618">
           <caret line="118" selection-start-line="118" selection-end-line="118" />
         </state>
       </provider>
@@ -412,6 +398,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/tooltip.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tooltip.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="7" column="6" lean-forward="true" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
