@@ -14,15 +14,16 @@
     createDom = () => {
         let headingDiv, contentDiv;
         this.nodeList = [];
+
         for(let i = 0; i < this.NUMBER_OF_ITEMS; i++) {
             headingDiv = this.createElement('heading', i);
             contentDiv = this.createElement('content', i);
             this.nodeList.push(headingDiv);
             this.nodeList.push(contentDiv);
         }
-        // container = document.createElement('div');
-        // container.setAttribute('id', 'container');
+
         this.container.innerText = '';
+
         for(let i = 0; i < this.nodeList.length; i++) {
             this.container.append(this.nodeList[i]);
         }
@@ -33,6 +34,7 @@
 
     createElement = (name, i) => {
         let newElement = document.createElement("div");
+
         if (name === 'heading') {
             newElement.setAttribute('class', 'main' + i + ' heading');
             newElement.innerText =  (i + 1) + this.suffix(i + 1) + ' Heading ';
@@ -69,8 +71,6 @@
                 (i === 3 && j!== 13 ) ? 'rd' :
                     'th';
     };
-
-
 }
 
 const accordian = new AccordianComponent();

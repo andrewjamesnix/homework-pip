@@ -14,7 +14,6 @@ class BoxGameComponent {
         score: 0
     };
 
-
     init = (button) => {
         this.gameAreaEl.innerHTML = '';
         this.container.innerHTML = '';
@@ -117,4 +116,4 @@ class BoxGameComponent {
     };
 }
 const game = new BoxGameComponent();
-//game.init();
+

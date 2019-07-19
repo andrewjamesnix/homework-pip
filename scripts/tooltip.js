@@ -1,9 +1,10 @@
 class TooltipComponent {
-    tooltips = document.querySelectorAll('.tooltip');
-    output = document.querySelector('.output');
-    myInterval = setInterval( () => {
-        this.output.style.display = 'none'
-    }, 3000);
+    setupDom = () => {
+        this.container = document.getElementById('container');
+        this.tooltips = document.querySelectorAll('.tooltip');
+        this.output = document.querySelector('.output');
+    };
+
     init = () => {
         this.tooltips.forEach(tooltip => {
             tooltip.addEventListener('mouseover', (e) => {
@@ -17,9 +18,13 @@ class TooltipComponent {
             tooltip.addEventListener('mouseout', () => {
                 this.output.style.display = 'none';
             });
+            this.myInterval = setInterval( () => {
+                this.output.style.display = 'none'
+            }, 3000);
         });
-    }
+    };
 }
 const tooltip = new TooltipComponent();
+tooltip.setupDom();
 tooltip.init();
 

@@ -26,8 +26,8 @@ describe('AccordianComponent', () => {
             expect(suffix).toBe("th");
         });
     });
-    describe(' createElement method', () => {
 
+    describe(' createElement method', () => {
         it('should return a HTML Node with correct classNames', () => {
             let node = component.createElement("heading", 2);
             expect(node.className).toBe('main2 heading');
@@ -37,13 +37,13 @@ describe('AccordianComponent', () => {
             let node = component.createElement("content", 7);
             expect(node.className).toBe('content7 content');
         });
-
       });
 
     describe(' createDom method', () => {
         beforeAll(() => {
           component.NUMBER_OF_ITEMS = 5;
         });
+
         it('should return a HTML Node with correct number of nodes', () => {
             component.createDom();
             expect(component.nodeList.length).toBe(10);
